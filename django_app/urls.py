@@ -20,4 +20,8 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls')),
+
+    path('auth/', include('dj_rest_auth.urls')),  # API endpoints for login, logout, etc.
+    path('auth/registration/', include('dj_rest_auth.registration.urls')),  # Registration endpoint
 ]
+
